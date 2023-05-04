@@ -1,0 +1,36 @@
+.containerNavBar {
+  background-color: black;
+  display: flex;
+  justify-content:space-between;
+ 
+  height: 100px;
+}
+.Link {
+  padding: 20px;
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.linkLogo {
+  display: flex;
+}
+
+.logoImg {
+  align-content: start;
+  margin-left: 50pxpx;
+  height: 170px;
+  width: 210px;
+  margin-top: -40px;
+
+  margin-left: 50px;
+}
+
+.form{
+  margin-right: 150px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 25px;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 50px;
+}

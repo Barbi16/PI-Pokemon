@@ -1,0 +1,24 @@
+.divCars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(240, 248, 255, 0.438);
+  margin: auto;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+}
+.divCars:hover {
+
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+.divCars img {
+  height: 200px;
+  width: 200px;
+}
+.divCars h3 {
+  margin: auto;
+  margin-top: 10px;
+  
+}

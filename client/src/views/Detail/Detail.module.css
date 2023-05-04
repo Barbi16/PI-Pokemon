@@ -1,0 +1,37 @@
+.tarjetPoke {
+ color: white;
+background-color: rgba(255, 255, 255, 0.233);
+width: 850px;
+height: 500px;
+margin: auto;
+margin-top: 30px;
+border-radius: 3px;
+padding: 15px;
+/* display: flex;
+flex-direction: column;
+align-items: center; */
+
+}
+
+.detailConteiner {
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  
+}
+.imgPoke{
+  margin-top:-450px;
+  margin-left: 270px;
+  height: 400px;
+  width: 500px;
+  margin-bottom: 30px;
+
+}
+
+.name{
+  font-size: 30px;
+  margin-left: 370px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

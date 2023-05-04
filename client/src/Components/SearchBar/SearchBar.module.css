@@ -1,0 +1,68 @@
+.selectCheck {
+  width: 200px;
+}
+
+select[multiple] {
+  height: 1.5em;
+  vertical-align: top;
+}
+
+select[multiple]:focus,
+select[multiple]:active {
+  height: auto;
+}
+
+ .conteinerSeachBar {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.conteinerInput {
+  margin: 20px;
+  width: 400px;
+
+  align-self: center;
+  align-content: center;
+}
+
+.selected {
+    background-color: #ccc
+}
+
+ .noSelected {
+    background-color: white;
+}
+
+.conteinerSelects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.conteinerSelects label {
+  margin: 20px;
+} 
+.conteinerSeachBar{
+  background-color: rgb(251, 255, 0);
+  padding: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: fantasy;
+  margin-bottom: 20px;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+}
+.buttonFilter{
+  height: 35px;
+  width: 150px;
+  font-family: fantasy;
+  font-size: 15px;
+  margin-top: 10px;
+
+}

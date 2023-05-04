@@ -1,0 +1,25 @@
+.landingConteiner {
+    background-image: url("../../img/PikachuAngry.324789cf.webp");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+.buttonLanding:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.616), 0 6px 20px 0 rgba(255, 255, 255, 0.37);
+    
+}
+.buttonLanding {
+    
+    width: 270px;
+    height: 100px;
+    font-size: 35px;
+    font-family: 'Luckiest Guy', cursive;
+    position: absolute;
+    left: 25vh;
+    top: 15vh;
+    
+}
+
