@@ -129,7 +129,7 @@ export function addPokemon(pokemon) {
       dispatch({ type: "ADD_POKEMON", payload: true });
       await axios.post(`/pokemons`, pokemon);
     } catch (error) {
-      
+      console.log(error);
       dispatch({ type: "ADD_POKEMON", payload: false });
     }
   };
