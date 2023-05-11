@@ -17,18 +17,18 @@ const router = Router();
 
 router.get("/pokemons", async (req, res) => {
   const {name}= req.query;
-  console.log(name)
+  
   //si en el endpoint pasan un name
   try {
     if (name) {
       const namePok = name.toLowerCase();
-   console.log(namePok)
+   
       const pokBDDName = await Pokemon.findAll({
         where: {
           name: {[Op.iLike]: `%${namePok}%`}}
         
       });
-      console.log(pokBDDName);
+      
       if (pokBDDName.length !== 0) {
         return res.status(200).json(pokBDDName);
       } else {
@@ -66,7 +66,7 @@ router.get("/pokemons/:id", async (req, res) => {
 router.post("/pokemons", async (req, res) => {
   
   const { name, hp, img, attack, defense, speed, height, weight,types } = req.body;
-console.log(req.body)
+
  
 
   try {

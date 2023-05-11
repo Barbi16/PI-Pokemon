@@ -25,7 +25,7 @@ const Form = () => {
   };
 
   const changeCheckbos = (e) => {
-    console.log(typeof e.target.name);
+    
     if (form.types.includes(e.target.name)) {
       form.types = form.types.filter((id) => id !== e.target.name);
       setForm({
@@ -75,7 +75,7 @@ const Form = () => {
 
     //name
     if (!/^[A-Za-z]+$/.test(form.name) || form.name === "") {
-      console.log(form.name);
+      
       newErrors.name = "Name must be plain text";
     }
 
@@ -111,7 +111,7 @@ const Form = () => {
 
     setErrors(newErrors);
   };
-  console.log(form);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

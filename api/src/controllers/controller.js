@@ -51,7 +51,7 @@ async function getIdPokemon(id) {
       },
     } );
 
-    console.log(pokBDDId)
+    
     if (pokBDDId) return pokBDDId;
   }
   throw new Error("El id solicitado no existe");
@@ -69,7 +69,7 @@ async function addPokemon(
   types
 ) {
 
-console.log(types)
+
  
   
     //verificamos que el pokemon que se quiere agregar no exista
@@ -89,7 +89,7 @@ console.log(types)
       weight,
     });
 
-    console.log(types)
+    
     for (const t of types) {
      
       let tipos = await Type.findOne({
@@ -100,7 +100,7 @@ console.log(types)
 
       await newPokemon.addType(tipos);
     }
-    //console.log(newPokemon)
+    //
     let pokemonCreate = await Pokemon.findOne({
       where: {
         id: newPokemon.id,
@@ -112,7 +112,7 @@ console.log(types)
       },
     });
 
-    //console.log(newPokemon);
+    //
     return pokemonCreate;
 
   
@@ -124,11 +124,11 @@ async function getTypes() {
     return findApiType;
   } else {
     const apiTypes = await axios.get("https://pokeapi.co/api/v2/type");
-    //console.log(apiTypes.data.results)
+    //
     const promise = Promise.all(
       apiTypes.data.results.map(async (type, index) => {
         let typesApi = await axios.get(type.url);
-        //console.log(typesApi.data.name)
+        //
 
         const types = await Type.create(
           {
@@ -160,7 +160,7 @@ async function getAllPokemons() {
  
   const ApiPokemons = await getPokemon();
   const totalPoke =  await dbPokemons.concat(ApiPokemons)
-console.log(totalPoke)
+
   return totalPoke;
 }
 module.exports = {

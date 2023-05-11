@@ -17,7 +17,7 @@ export const ADD_POKEMON = "ADD_POKEMON"
 
 export const getPokemon = () => {
   return async function (dispatch) {
-    const apiPokemon = await axios.get("http://localhost:3001/pokemons");
+    const apiPokemon = await axios.get("/pokemons");
     const pokemons = apiPokemon.data;
 
     dispatch({ type: GET_POKEMON, payload: pokemons });
@@ -25,9 +25,9 @@ export const getPokemon = () => {
 };
 
 export const getPokemonById = (id) => {
-  console.log(id);
+  
   return async function (dispatch) {
-    const apiPokemon = await axios.get(`http://localhost:3001/pokemons/${id}`);
+    const apiPokemon = await axios.get(`/pokemons/${id}`);
     const pokemonById = apiPokemon.data;
 
     dispatch({ type: GET_POKEMON_BY_ID, payload: pokemonById });
@@ -36,7 +36,7 @@ export const getPokemonById = (id) => {
 
 export const getPokemonType = () => {
   return async function (dispatch) {
-    const apiTypes = await axios.get("http://localhost:3001/types");
+    const apiTypes = await axios.get("/types");
     const pokemonTypes = apiTypes.data;
     dispatch({ type: GET_POKEMON_TYPE, payload: pokemonTypes });
   };
@@ -62,7 +62,7 @@ export const getSelectedOption = (option) => {
 
 export const orderThePokemons = (type) => {
   if (type === "upward") {
-    console.log(type);
+    
     return {
       type: "ORDER_POKEMONS_UPWARD_ALFAB",
     };
@@ -78,7 +78,7 @@ export const orderThePokemons = (type) => {
     };
   }
   if (type === "-attack") {
-    console.log(type);
+    
     return {
       type: "ORDER_POKEMONS_FALLING_ATTACK",
     };
@@ -92,12 +92,12 @@ export const clearFilteredPokemons = () => {
 };
 
 export const getPokemonByName = (value) => {
-  console.log(value);
+  
   return async function (dispatch) {
     if (value) {
       try {
         let pokemon = await axios.get(
-          `http://localhost:3001/pokemons?name=${value}`
+          `/pokemons?name=${value}`
         );
 
         return dispatch({
@@ -127,9 +127,9 @@ export function addPokemon(pokemon) {
   return async function (dispatch) {
     try {
       dispatch({ type: "ADD_POKEMON", payload: true });
-      await axios.post(`http://localhost:3001/pokemons`, pokemon);
+      await axios.post(`/pokemons`, pokemon);
     } catch (error) {
-      console.log(error);
+      
       dispatch({ type: "ADD_POKEMON", payload: false });
     }
   };

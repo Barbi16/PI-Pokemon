@@ -11,13 +11,13 @@ const CardsConteiner = () => {
   const setPokemonName = useSelector((state) => state.setName);
 
   const dispatch = useDispatch();
-  console.log(pokemons)
+  
 
 
 
   useEffect(() => {
-    console.log(pokemonsFilter)
-    console.log(pokemonByName)
+    
+    
     if (pokemonByName !== null) {
       dispatch(setName(true));
     }

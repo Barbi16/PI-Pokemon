@@ -106,7 +106,7 @@ const rootReducer = (state = initialState, action) => {
         }
 
        case ORDER_POKEMONS_FALLING_ATTACK:
-        console.log('pasa');
+        
         const orderPokeFallingAttack = state.pokemons.sort(
           (a, b) => {
             if (a.attack < b.attack) {
@@ -118,7 +118,7 @@ const rootReducer = (state = initialState, action) => {
             }
           }
         )
-        console.log(orderPokeFallingAttack)
+        
         return{
           ...state,
           filteredPokemons: orderPokeFallingAttack
@@ -132,7 +132,7 @@ const rootReducer = (state = initialState, action) => {
       }
     
     case GET_POKEMON_BY_NAME  :
-      console.log(action.payload)
+      
       return{
         ...state,
         pokemonByName: action.payload

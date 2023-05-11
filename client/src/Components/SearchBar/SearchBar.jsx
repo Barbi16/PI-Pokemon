@@ -45,7 +45,7 @@ const SearchBar = () => {
   //busqueda por name
   const [namesearch, setNamesearch] = useState("");
 
-  console.log(namesearch)
+  
   const handleSearch = (e) => {
     const inputValue = e.target.value.toLowerCase();
     setNamesearch(inputValue);

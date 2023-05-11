@@ -5,7 +5,7 @@ import { clearPokemonById } from "../../Redux/actions"
 
 const Cards = (props)=>{
 
-    console.log(props)
+    
  const dispatch = useDispatch()
  function handlerClear () {
 
