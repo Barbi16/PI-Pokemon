@@ -24,6 +24,6 @@ const port = process.env.port || 3001
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
-    
+    console.log('%s listening at 3001')
   });
 });
