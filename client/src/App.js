@@ -6,7 +6,7 @@ import Detail from "./views/Detail/Detail";
 import Landing from "./views/Landing/Landing";
 import NavBar from "./Components/NavBar/NavBar";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001/"
+axios.defaults.baseURL = "https://pi-pokemon-production-5ce8.up.railway.app/"
 
 function App() {
   //const location  =useLocation
