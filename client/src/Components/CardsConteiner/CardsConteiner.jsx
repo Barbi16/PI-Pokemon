@@ -12,7 +12,7 @@ const CardsConteiner = () => {
 
   const dispatch = useDispatch();
   
-
+ console.log(pokemons)
 
 
   useEffect(() => {
@@ -44,10 +44,11 @@ const CardsConteiner = () => {
             name={pokemonByName[0].name}
             img={pokemonByName[0].img}
             key={pokemonByName[0].id}
+            
           />
         ) : (
           pokemons.map((p) => {
-            return <Cards id={p.id} name={p.name} img={p.img} key={p.id} />;
+            return <Cards id={p.id} name={p.name} img={p.img} key={p.id} types={p.types}/>;
           })
         )}
       </div>

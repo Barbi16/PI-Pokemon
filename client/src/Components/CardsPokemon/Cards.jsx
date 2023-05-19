@@ -1,22 +1,39 @@
-import style  from "./Cards.module.css"
-import {Link} from "react-router-dom"
-import { useDispatch } from "react-redux"
-import { clearPokemonById } from "../../Redux/actions"
+import style from "./Cards.module.css";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { clearPokemonById } from "../../Redux/actions";
 
-const Cards = (props)=>{
+const Cards = (props) => {
+  console.log(props);
 
-    
- const dispatch = useDispatch()
- function handlerClear () {
+  const dispatch = useDispatch();
+  function handlerClear() {
+    dispatch(clearPokemonById());
+  }
 
-    dispatch(clearPokemonById())
- }
-
-    return(
-        <div className={style.divCars }>
-            <h3>Name: {props.name}</h3>
-            <Link   key={props.id}  to={`pokemon/${props.id}`} onClick={handlerClear} ><img  src={props.img} alt="pokemons" /></Link>
+  return (
+    <div className={style.divCars}>
+      <div className={style.divInner}>
+        <div className={style.frontCard}>
+          <h3> {props.name} </h3>
+          <Link
+            key={props.id}
+            to={`pokemon/${props.id}`}
+            onClick={handlerClear}
+          >
+            <img src={props.img} alt="pokemons" />
+          </Link>
         </div>
-    )
-}
-export default Cards 
+        <div className={style.backCard}>
+          <h2>Types</h2>
+          {props.types.map((type, index) => (
+            <Link className={style.typeName} key={index} to={`pokemon/${props.id}`} onClick={handlerClear}>
+              <h3> {type.name}</h3>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Cards;
