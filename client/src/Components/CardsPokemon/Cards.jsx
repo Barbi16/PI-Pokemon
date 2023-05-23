@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { clearPokemonById } from "../../Redux/actions";
 
 const Cards = (props) => {
-  console.log(props);
+
 
   const dispatch = useDispatch();
   function handlerClear() {
@@ -26,7 +26,7 @@ const Cards = (props) => {
         </div>
         <div className={style.backCard}>
           <h2>Types</h2>
-          {props.types.map((type, index) => (
+          {props.types && props.types.map((type, index) => (
             <Link className={style.typeName} key={index} to={`pokemon/${props.id}`} onClick={handlerClear}>
               <h3> {type.name}</h3>
             </Link>
